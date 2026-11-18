@@ -13,7 +13,7 @@
   --blue-100: #e4eef9;
   --blue-50: #f3f7fc;
   --orange: #f59a23;
-  --orange-700: #b4620a;
+  --orange-700: #9c5607;
   --orange-50: #fff4e3;
   --green: #0e7a43;
   --ink: #0f2338;
@@ -691,10 +691,11 @@ a.topbar__item:hover { color: var(--white); text-decoration: underline; }
   padding: 16px 20px;
   border-radius: var(--radius);
   background: var(--blue-50);
-  border-left: 4px solid var(--orange);
   font-size: .9688rem;
   color: var(--muted);
 }
+.audiences li { position: relative; padding-left: 40px; }
+.audiences li::before { content: ""; position: absolute; left: 20px; top: 24px; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); }
 .audiences strong { font-family: var(--font-display); color: var(--ink); font-size: 1rem; }
 
 /* 13. Usuarios */
@@ -840,7 +841,7 @@ a.topbar__item:hover { color: var(--white); text-decoration: underline; }
   transition: border-color .2s, box-shadow .2s;
 }
 .field textarea { resize: vertical; min-height: 120px; }
-.field ::placeholder { color: #8796a8; }
+.field ::placeholder { color: #66758a; }
 .field input:not([type="checkbox"]):hover,
 .field select:hover,
 .field textarea:hover { border-color: var(--blue-200); }
