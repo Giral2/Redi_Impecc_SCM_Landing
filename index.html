@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salud en Casa Médicos | Atención médica domiciliaria en Cali</title>
+  <meta name="description" content="IPS de atención médica domiciliaria en Cali. Cuidados paliativos, paciente crónico y agudo, clínica de heridas, enfermería y terapias en casa.">
+  <meta name="theme-color" content="#0f4c81">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Iconos -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.300-1.300a2 2 0 0 1 2.100-.400c.900.300 1.800.600 2.800.700A2 2 0 0 1 22 16.900z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6 9-6"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.500"/><path d="M12 6.500V12l3.500 2"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.500 4.500 4.500L19 7.500"/></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11.500 12 4l9 7.500"/><path d="M5.500 10v9.500h13V10"/><path d="M12 17.200c-1.800-1.300-2.900-2.400-2.900-3.700a1.600 1.600 0 0 1 2.900-.900 1.600 1.600 0 0 1 2.900.900c0 1.300-1.100 2.400-2.900 3.700z"/></symbol>
+      <symbol id="i-heart-hand" viewBox="0 0 24 24"><path d="M12 10.500C10 9 8.500 7.700 8.500 6a2.200 2.200 0 0 1 3.500-1.700A2.200 2.200 0 0 1 15.500 6c0 1.700-1.500 3-3.500 4.500z"/><path d="M3 14.500h3.500l4 1.500h3a1.500 1.500 0 0 1 0 3H10"/><path d="m14.500 17 4.300-1.900a1.600 1.600 0 0 1 1.400 2.900L13 21.500l-6.500-2H3"/></symbol>
+      <symbol id="i-activity" viewBox="0 0 24 24"><path d="M2.500 12h4l2.500-6.500 4.500 13L16 12h5.500"/></symbol>
+      <symbol id="i-stethoscope" viewBox="0 0 24 24"><path d="M5.500 3H4.500A1.500 1.500 0 0 0 3 4.500V9a5 5 0 0 0 10 0V4.500A1.500 1.500 0 0 0 11.500 3h-1"/><path d="M8 14v2.500a5 5 0 0 0 10 0V14"/><circle cx="18" cy="11.500" r="2.500"/></symbol>
+      <symbol id="i-bandage" viewBox="0 0 24 24"><rect x="1.500" y="8" width="21" height="8" rx="4" transform="rotate(-45 12 12)"/><path d="m9 9 6 6M12 10.300v.010M10.300 12v.010M13.700 12v.010M12 13.700v.010"/></symbol>
+      <symbol id="i-syringe" viewBox="0 0 24 24"><path d="m17.500 2.500 4 4M19.500 4.500 16 8M14 6l4 4-8.500 8.500H6v-3.500L14 6zM6 18l-3.500 3.500M9.500 10.500l2 2M12 8l2 2"/></symbol>
+      <symbol id="i-move" viewBox="0 0 24 24"><circle cx="13" cy="4.500" r="1.800"/><path d="m7 21 3-6-2.500-3.500 3-4 3 2.500 3.500 1M10.500 7.500 6.500 9l-1 3.500M13.500 14l2 2.500V21"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.500"/><path d="M2.500 20a6.500 6.500 0 0 1 13 0"/><circle cx="17.500" cy="9" r="2.500"/><path d="M17 14.200a5 5 0 0 1 4.500 5"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.500 4 5.500v6c0 5 3.400 8.400 8 10 4.600-1.600 8-5 8-10v-6l-8-3z"/><path d="m8.500 12 2.500 2.500 4.500-4.500"/></symbol>
+      <symbol id="i-loop" viewBox="0 0 24 24"><path d="M17 2.500 20.500 6 17 9.500"/><path d="M3.500 11V9a3 3 0 0 1 3-3h14M7 21.500 3.500 18 7 14.500"/><path d="M20.500 13v2a3 3 0 0 1-3 3h-14"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2.500H7a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-12l-5-5z"/><path d="M14 2.500v5h5M9 13h6M9 17h4"/></symbol>
+      <symbol id="i-calc" viewBox="0 0 24 24"><rect x="4.500" y="2.500" width="15" height="19" rx="2.500"/><path d="M8 7h8M8 11.500h.010M12 11.500h.010M16 11.500h.010M8 15h.010M12 15h.010M16 15v3M8 18h4"/></symbol>
+      <symbol id="i-video" viewBox="0 0 24 24"><rect x="2.500" y="6" width="13" height="12" rx="2.500"/><path d="m15.500 10.500 6-3.500v10l-6-3.500"/></symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.300 3.900 2.200 18a2 2 0 0 0 1.700 3h16.200a2 2 0 0 0 1.700-3L13.700 3.900a2 2 0 0 0-3.400 0z"/><path d="M12 9.500v4.500M12 17.500v.010"/></symbol>
+      <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2.500" y="7" width="19" height="13" rx="2.500"/><path d="M8.500 7V5.500a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2V7M2.500 13h19"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.500 11.500a8 8 0 0 1-11.800 7L3.500 20l1.500-4.700A8 8 0 1 1 20.500 11.500z"/><path d="M8.500 10h7M8.500 13.500h4.500"/></symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2zm0 1.800a8.200 8.200 0 1 1-4.200 15.300l-.300-.200-2.900.800.800-2.900-.200-.300A8.200 8.200 0 0 1 12 3.800zm-3.300 3.900c-.200 0-.500.100-.700.300-.300.300-1 1-1 2.300 0 1.400 1 2.700 1.200 2.900.100.200 2 3.100 4.900 4.300 2.400 1 2.900.800 3.400.700.500 0 1.700-.700 1.900-1.300.200-.700.200-1.200.200-1.300-.100-.200-.300-.200-.600-.400l-2-.900c-.300-.100-.500-.200-.700.100l-.900 1.100c-.200.200-.300.200-.600.100-.300-.200-1.200-.500-2.300-1.400-.900-.800-1.400-1.700-1.600-2-.200-.300 0-.500.100-.600l.400-.500c.200-.200.200-.300.300-.500.100-.200.100-.400 0-.500l-.900-2.100c-.200-.500-.400-.500-.600-.500h-.500z"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- Barra superior -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <p class="topbar__item">
+        <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
+        Lunes a viernes de 8:00 a. m. a 5:00 p. m. · Sábados de 8:00 a. m. a 1:00 p. m.
+      </p>
+      <div class="topbar__links">
+        <a class="topbar__item" href="tel:+573159565622">
+          <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>315 956 5622
+        </a>
+        <a class="topbar__item" href="mailto:info@saludencasamedicos.com">
+          <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>info@saludencasamedicos.com
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Encabezado -->
+  <header class="header" id="inicio-header">
+    <div class="container header__inner">
+      <a class="brand" href="#inicio" aria-label="Salud en Casa Médicos, ir al inicio">
+        <svg class="brand__mark" viewBox="0 0 44 44" aria-hidden="true">
+          <rect width="44" height="44" rx="12" fill="#0f4c81"/>
+          <path d="M9.500 21.500 22 11l12.500 10.500" fill="none" stroke="#fff" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13 20v11.500a1.500 1.500 0 0 0 1.500 1.500h15a1.500 1.500 0 0 0 1.500-1.500V20" fill="none" stroke="#fff" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M22 29.800c-2.900-2.100-4.600-3.800-4.600-5.800a2.500 2.500 0 0 1 4.600-1.400 2.500 2.500 0 0 1 4.600 1.400c0 2-1.700 3.700-4.600 5.800z" fill="#f59a23"/>
+        </svg>
+        <span class="brand__text">
+          <span class="brand__name">Salud en Casa</span>
+          <span class="brand__sub">Médicos S.A.S.</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="menu" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#servicios">Servicios</a></li>
+          <li><a class="nav__link" href="#paliativos">Cuidados paliativos</a></li>
+          <li><a class="nav__link" href="#nosotros">Nosotros</a></li>
+          <li><a class="nav__link" href="#usuarios">Usuarios</a></li>
+          <li><a class="nav__link" href="#corporativo">Corporativo</a></li>
+          <li><a class="nav__link" href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="nav__mobile-extra">
+          <a class="btn btn--primary btn--block" href="#contacto">Solicitar un servicio</a>
+          <a class="btn btn--ghost btn--block" href="tel:+573159565622">
+            <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Llamar al 315 956 5622
+          </a>
+        </div>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn btn--primary header__cta" href="#contacto">Solicitar un servicio</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
+          <span class="visually-hidden">Abrir menú</span>
+          <svg class="icon icon--open" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icon icon--close" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">
+            <span class="eyebrow__dot" aria-hidden="true"></span>
+            IPS de atención domiciliaria en Cali
+          </p>
+          <h1 class="hero__title">Atención médica en la <span class="mark">comodidad</span> de tu hogar</h1>
+          <p class="hero__lead">Llevamos médicos, enfermería y terapias hasta la casa del paciente, y acompañamos a la familia mientras dura el cuidado.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="#contacto">
+              Solicitar un servicio
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn--ghost btn--lg" href="#servicios">Ver servicios</a>
+          </div>
+          <p class="hero__phone">
+            ¿Prefieres hablar con alguien? Llámanos al
+            <a href="tel:+573159565622">315 956 5622</a>
+          </p>
+        </div>
+
+        <div class="hero__media">
+          <div class="hero__photo">
+            <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=1100&q=75&auto=format&fit=crop" alt="Profesional de la salud atendiendo a una paciente mayor" width="1100" height="825" fetchpriority="high">
+          </div>
+          <div class="float-card float-card--a">
+            <span class="float-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></span>
+            <span>
+              <strong>Vamos a tu casa</strong>
+              <small>Médico, enfermería y terapias</small>
+            </span>
+          </div>
+          <div class="float-card float-card--b">
+            <span class="float-card__icon float-card__icon--warm"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <span>
+              <strong>La familia también cuenta</strong>
+              <small>Programa de apoyo al cuidador</small>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="pillars" aria-label="Nuestros compromisos de calidad">
+          <li class="pillar">
+            <span class="pillar__icon"><svg class="icon" aria-hidden="true"><use href="#i-heart-hand"/></svg></span>
+            <div>
+              <h2 class="pillar__title">Cuidado humanizado</h2>
+              <p>Respeto por la dignidad del paciente y de su familia.</p>
+            </div>
+          </li>
+          <li class="pillar">
+            <span class="pillar__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <div>
+              <h2 class="pillar__title">Seguridad del paciente</h2>
+              <p>Identificamos y prevenimos riesgos en cada atención.</p>
+            </div>
+          </li>
+          <li class="pillar">
+            <span class="pillar__icon"><svg class="icon" aria-hidden="true"><use href="#i-loop"/></svg></span>
+            <div>
+              <h2 class="pillar__title">Continuidad</h2>
+              <p>El tratamiento sigue en casa, sin interrupciones.</p>
+            </div>
+          </li>
+          <li class="pillar">
+            <span class="pillar__icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+            <div>
+              <h2 class="pillar__title">Apoyo al cuidador</h2>
+              <p>Enseñamos y acompañamos a quien cuida.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Accesos rápidos -->
+    <section class="section section--tight" id="tramites" aria-labelledby="tramites-titulo">
+      <div class="container">
+        <div class="section__head section__head--row">
+          <div>
+            <p class="kicker">Trámites en línea</p>
+            <h2 class="section__title" id="tramites-titulo">¿Qué necesitas hacer hoy?</h2>
+          </div>
+          <p class="section__note">Cada trámite abre su formulario en una pestaña nueva.</p>
+        </div>
+
+        <ul class="tasks">
+          <li>
+            <a class="task" href="https://docs.google.com/forms/d/e/1FAIpQLSemaUqKY_hYjrR4lHuXXpMgeVcvjfC1rEoGU6SIP83VYST34w/viewform" target="_blank" rel="noopener">
+              <span class="task__icon"><svg class="icon" aria-hidden="true"><use href="#i-calc"/></svg></span>
+              <span class="task__body">
+                <strong>Cotizar un servicio</strong>
+                <small>Cuéntanos qué atención necesitas y te enviamos el valor.</small>
+              </span>
+              <svg class="icon task__go" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="task" href="https://forms.office.com/r/9T1xFLsdhd" target="_blank" rel="noopener">
+              <span class="task__icon"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></span>
+              <span class="task__body">
+                <strong>Pedir mi historia clínica</strong>
+                <small>Solicita una copia de la historia del paciente.</small>
+              </span>
+              <svg class="icon task__go" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="task" href="https://sem-pacientes.homehealthcare.tech/" target="_blank" rel="noopener">
+              <span class="task__icon"><svg class="icon" aria-hidden="true"><use href="#i-video"/></svg></span>
+              <span class="task__body">
+                <strong>Entrar a teleconsulta</strong>
+                <small>Portal de pacientes para tu cita por video.</small>
+              </span>
+              <svg class="icon task__go" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="task" href="https://form.jotformz.com/82903864542664" target="_blank" rel="noopener">
+              <span class="task__icon"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg></span>
+              <span class="task__body">
+                <strong>Servicio al cliente</strong>
+                <small>Déjanos una solicitud, una queja o una felicitación.</small>
+              </span>
+              <svg class="icon task__go" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="task" href="https://docs.google.com/forms/d/e/1FAIpQLSeF6cnUi5nhSE7RnqhLd8gEdQTpw002ky3jsd-vrTk54lasvA/viewform" target="_blank" rel="noopener">
+              <span class="task__icon"><svg class="icon" aria-hidden="true"><use href="#i-alert"/></svg></span>
+              <span class="task__body">
+                <strong>Reportar un incidente</strong>
+                <small>Avísanos si algo salió mal durante una atención.</small>
+              </span>
+              <svg class="icon task__go" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+            </a>
+          </li>
+          <li>
+            <a class="task" href="https://form.jotformz.com/82901159642660" target="_blank" rel="noopener">
+              <span class="task__icon"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg></span>
+              <span class="task__body">
+                <strong>Trabaja con nosotros</strong>
+                <small>Envíanos tus datos para hacer parte del equipo.</small>
+              </span>
+              <svg class="icon task__go" aria-hidden="true"><use href="#i-arrow-up-right"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="section section--tint" id="servicios" aria-labelledby="servicios-titulo">
+      <div class="container">
+        <div class="section__head">
+          <p class="kicker">Servicios</p>
+          <h2 class="section__title" id="servicios-titulo">Programas de atención en casa</h2>
+          <p class="section__lead">Elige un programa para ver a quién va dirigido y qué incluye.</p>
+        </div>
+
+        <div class="services">
+          <div class="services__tabs" role="tablist" aria-label="Programas de atención" aria-orientation="vertical">
+            <button class="service-tab" role="tab" id="tab-domiciliaria" aria-controls="panel-domiciliaria" aria-selected="true" type="button">
+              <span class="service-tab__icon"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg></span>
+              <span class="service-tab__text"><strong>Atención domiciliaria</strong><small>Pacientes que no se pueden desplazar</small></span>
+            </button>
+            <button class="service-tab" role="tab" id="tab-paliativos" aria-controls="panel-paliativos" aria-selected="false" tabindex="-1" type="button">
+              <span class="service-tab__icon"><svg class="icon" aria-hidden="true"><use href="#i-heart-hand"/></svg></span>
+              <span class="service-tab__text"><strong>Cuidados paliativos</strong><small>Alivio del dolor y apoyo a la familia</small></span>
+            </button>
+            <button class="service-tab" role="tab" id="tab-cronico" aria-controls="panel-cronico" aria-selected="false" tabindex="-1" type="button">
+              <span class="service-tab__icon"><svg class="icon" aria-hidden="true"><use href="#i-activity"/></svg></span>
+              <span class="service-tab__text"><strong>Paciente crónico</strong><small>Manejo de larga duración</small></span>
+            </button>
+            <button class="service-tab" role="tab" id="tab-agudo" aria-controls="panel-agudo" aria-selected="false" tabindex="-1" type="button">
+              <span class="service-tab__icon"><svg class="icon" aria-hidden="true"><use href="#i-stethoscope"/></svg></span>
+              <span class="service-tab__text"><strong>Paciente agudo</strong><small>Baja, mediana y alta complejidad</small></span>
+            </button>
+            <button class="service-tab" role="tab" id="tab-heridas" aria-controls="panel-heridas" aria-selected="false" tabindex="-1" type="button">
+              <span class="service-tab__icon"><svg class="icon" aria-hidden="true"><use href="#i-bandage"/></svg></span>
+              <span class="service-tab__text"><strong>Clínica de heridas</strong><small>Mediana y alta complejidad</small></span>
+            </button>
+          </div>
+
+          <div class="services__panels">
+            <article class="service-panel" role="tabpanel" id="panel-domiciliaria" aria-labelledby="tab-domiciliaria" tabindex="0">
+              <h3>Atención domiciliaria</h3>
+              <p>Atendemos en casa a pacientes que no se pueden desplazar y que cursan patologías especiales. El paciente recibe su tratamiento sin salir, y se evitan hospitalizaciones y consultas que no hacen falta.</p>
+              <h4>Qué incluye</h4>
+              <ul class="checks">
+                <li>Visita médica y de enfermería en el domicilio</li>
+                <li>Administración de medicamentos y toma de laboratorios</li>
+                <li>Terapias de rehabilitación</li>
+                <li>Educación a la familia para el cuidado diario</li>
+              </ul>
+              <a class="link-arrow" href="#contacto" data-servicio="Atención domiciliaria">Solicitar este servicio <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </article>
+
+            <article class="service-panel" role="tabpanel" id="panel-paliativos" aria-labelledby="tab-paliativos" tabindex="0" hidden>
+              <h3>Cuidados paliativos</h3>
+              <p>El programa busca mejorar la calidad de vida del paciente y de sus familiares cuando enfrentan una enfermedad que pone en riesgo la vida. Se enfoca en prevenir y aliviar el sufrimiento con una valoración temprana y el tratamiento del dolor.</p>
+              <h4>Qué incluye</h4>
+              <ul class="checks">
+                <li>Alivio del dolor y de otros síntomas angustiantes</li>
+                <li>Atención de los aspectos psicológicos y espirituales</li>
+                <li>Apoyo a la familia durante la enfermedad y el duelo</li>
+              </ul>
+              <a class="link-arrow" href="#paliativos">Conocer el programa <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </article>
+
+            <article class="service-panel" role="tabpanel" id="panel-cronico" aria-labelledby="tab-cronico" tabindex="0" hidden>
+              <h3>Paciente crónico</h3>
+              <p>Manejo en casa del paciente crónico de alto costo, con menos consultas de urgencias y hospitalizaciones innecesarias. Incluye pacientes que requieren ventilación mecánica en el domicilio, cuando cumplen los criterios de inclusión y la vivienda es adecuada.</p>
+              <h4>Patologías que atendemos</h4>
+              <ul class="checks">
+                <li>EPOC</li>
+                <li>Diabetes</li>
+                <li>Trauma craneoencefálico severo con secuelas neurológicas</li>
+                <li>Trauma raquimedular</li>
+              </ul>
+              <a class="link-arrow" href="#contacto" data-servicio="Paciente crónico">Solicitar este servicio <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </article>
+
+            <article class="service-panel" role="tabpanel" id="panel-agudo" aria-labelledby="tab-agudo" tabindex="0" hidden>
+              <h3>Paciente agudo</h3>
+              <p>Atención por niveles según lo que necesite el paciente. En todos hay visita médica, terapias de rehabilitación, visita de enfermera jefe y visitas de auxiliar de enfermería.</p>
+              <div class="levels">
+                <div class="level"><strong>Baja complejidad</strong><span>Medicamentos hasta 1 dosis al día</span></div>
+                <div class="level"><strong>Mediana complejidad</strong><span>Medicamentos hasta 3 dosis al día</span></div>
+                <div class="level"><strong>Alta complejidad</strong><span>Medicamentos más de 3 dosis al día</span></div>
+              </div>
+              <h4>También atendemos</h4>
+              <ul class="checks">
+                <li>Paciente con traqueostomía menor a 90 días, con manejo de la vía aérea hasta la decanulación</li>
+                <li>Paciente con trastorno neurológico menor a 90 días, con manejo médico, técnico y de rehabilitación</li>
+              </ul>
+              <a class="link-arrow" href="#contacto" data-servicio="Paciente agudo">Solicitar este servicio <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </article>
+
+            <article class="service-panel" role="tabpanel" id="panel-heridas" aria-labelledby="tab-heridas" tabindex="0" hidden>
+              <h3>Clínica de heridas</h3>
+              <p>Manejo en casa de heridas de mediana y alta complejidad, con seguimiento hasta la recuperación.</p>
+              <h4>Qué incluye</h4>
+              <ul class="checks">
+                <li>Manejo médico</li>
+                <li>Terapia enterostomal</li>
+                <li>Curaciones e insumos POS</li>
+                <li>Rehabilitación</li>
+              </ul>
+              <a class="link-arrow" href="#contacto" data-servicio="Clínica de heridas">Solicitar este servicio <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </article>
+          </div>
+        </div>
+
+        <!-- Qué hacemos en casa -->
+        <div class="care">
+          <h3 class="care__title">Lo que hace nuestro equipo en tu casa</h3>
+          <div class="care__grid">
+            <article class="care-card">
+              <span class="care-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-syringe"/></svg></span>
+              <h4>Enfermería</h4>
+              <ul>
+                <li>Administración de medicamentos</li>
+                <li>Toma de laboratorios y glucometría</li>
+                <li>Cambio de sonda vesical y nasogástrica</li>
+                <li>Curaciones tipo I y II</li>
+                <li>Cuidados básicos de enfermería</li>
+              </ul>
+            </article>
+            <article class="care-card">
+              <span class="care-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-move"/></svg></span>
+              <h4>Rehabilitación</h4>
+              <ul>
+                <li>Terapia física</li>
+                <li>Terapia respiratoria</li>
+                <li>Terapia de lenguaje y deglución</li>
+                <li>Terapia ocupacional</li>
+              </ul>
+            </article>
+            <article class="care-card">
+              <span class="care-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-stethoscope"/></svg></span>
+              <h4>Consulta domiciliaria</h4>
+              <ul>
+                <li>Medicina general</li>
+                <li>Nutrición</li>
+                <li>Psicología</li>
+                <li>Trabajo social</li>
+              </ul>
+            </article>
+            <article class="care-card">
+              <span class="care-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+              <h4>Apoyo al cuidador</h4>
+              <ul>
+                <li>Diagnóstico de la situación del cuidador</li>
+                <li>Aplicación de escalas</li>
+                <li>Educación para cuidar al paciente crónico</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section class="section" id="como-funciona" aria-labelledby="pasos-titulo">
+      <div class="container">
+        <div class="section__head">
+          <p class="kicker">Cómo empezar</p>
+          <h2 class="section__title" id="pasos-titulo">Pedir la atención toma tres pasos</h2>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num" aria-hidden="true">1</span>
+            <h3>Cuéntanos el caso</h3>
+            <p>Escríbenos por el formulario, por WhatsApp o llámanos. Con el diagnóstico y la dirección del paciente es suficiente para empezar.</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">2</span>
+            <h3>Un asesor te contacta</h3>
+            <p>Revisamos qué atención necesita el paciente y te explicamos el servicio, o lo coordinamos con tu aseguradora.</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">3</span>
+            <h3>Vamos a tu casa</h3>
+            <p>El equipo asignado llega al domicilio y deja a la familia las indicaciones para el cuidado del día a día.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Cuidados paliativos -->
+    <section class="section section--navy" id="paliativos" aria-labelledby="paliativos-titulo">
+      <div class="container feature">
+        <div class="feature__media">
+          <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=900&q=75&auto=format&fit=crop" alt="Una mano sostiene con cuidado la mano de un paciente" loading="lazy" width="900" height="675">
+        </div>
+        <div class="feature__copy">
+          <p class="kicker kicker--light">Programa de cuidados paliativos</p>
+          <h2 class="section__title" id="paliativos-titulo">Acompañar también es cuidar</h2>
+          <p>La OMS define los cuidados paliativos como el enfoque que mejora la calidad de vida de pacientes y familias que enfrentan enfermedades amenazantes para la vida. Nuestro programa trabaja en esa línea, desde la casa del paciente.</p>
+          <ul class="checks checks--light">
+            <li>Aliviamos el dolor y otros síntomas angustiantes.</li>
+            <li>Afirmamos la vida y entendemos la muerte como un proceso natural, sin acelerarla ni atrasarla.</li>
+            <li>Atendemos lo psicológico y lo espiritual, además de lo físico.</li>
+            <li>Apoyamos a la familia durante la enfermedad y en el duelo.</li>
+          </ul>
+          <div class="feature__actions">
+            <a class="btn btn--light" href="#contacto" data-servicio="Cuidados paliativos">Hablar con un asesor</a>
+            <a class="btn btn--outline-light" href="https://www.saludencasamedicos.com/images/PaliativosImage.jpg" target="_blank" rel="noopener">Ver información del programa</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section class="section" id="nosotros" aria-labelledby="nosotros-titulo">
+      <div class="container about">
+        <div class="about__copy">
+          <p class="kicker">Nosotros</p>
+          <h2 class="section__title" id="nosotros-titulo">Un equipo de salud que trabaja en la casa del paciente</h2>
+          <p class="section__lead">Salud en Casa Médicos S.A.S. es una institución prestadora de servicios de salud domiciliarios. Atendemos las necesidades físicas y psicológicas del paciente y damos a la familia educación y apoyo permanente para el cuidado.</p>
+
+          <div class="tabs" data-tabs>
+            <div class="tabs__list" role="tablist" aria-label="Sobre la institución">
+              <button class="tabs__tab" role="tab" id="t-mision" aria-controls="p-mision" aria-selected="true" type="button">Misión</button>
+              <button class="tabs__tab" role="tab" id="t-vision" aria-controls="p-vision" aria-selected="false" tabindex="-1" type="button">Visión</button>
+              <button class="tabs__tab" role="tab" id="t-calidad" aria-controls="p-calidad" aria-selected="false" tabindex="-1" type="button">Política de calidad</button>
+            </div>
+            <div class="tabs__panel" role="tabpanel" id="p-mision" aria-labelledby="t-mision" tabindex="0">
+              <p>Proveer servicios de salud domiciliarios de alta calidad que satisfagan las necesidades físicas y psicológicas de los pacientes, con integralidad y continuidad, a cargo de profesionales dedicados a un cuidado humanizado que involucra a la familia. Todo esto con un uso racional de gastos y costos para las entidades aseguradoras.</p>
+            </div>
+            <div class="tabs__panel" role="tabpanel" id="p-vision" aria-labelledby="t-vision" tabindex="0" hidden>
+              <p>Para el año 2027 seremos reconocidos por nuestros servicios de asistencia domiciliaria, con un modelo de atención integral, humanizado y seguro. Buscamos la certificación de sistemas de gestión de la calidad y el reconocimiento público por las buenas prácticas, la responsabilidad social y la innovación.</p>
+            </div>
+            <div class="tabs__panel" role="tabpanel" id="p-calidad" aria-labelledby="t-calidad" tabindex="0" hidden>
+              <p>Estamos comprometidos con la prestación integral de servicios de salud en el domicilio, con oportunidad, continuidad, eficiencia, pertinencia, respeto por la dignidad humana y seguridad del paciente. Promovemos la cultura de seguridad en trabajadores y usuarios con acciones de investigación, identificación, prevención y gestión de riesgos.</p>
+            </div>
+          </div>
+
+          <ul class="doc-links">
+            <li><a href="https://www.saludencasamedicos.com/images/Humaniza1.jpg" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Política de humanización</a></li>
+            <li><a href="https://www.saludencasamedicos.com/images/Humaniza2.jpg" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Política de seguridad del paciente</a></li>
+          </ul>
+        </div>
+
+        <div class="about__side">
+          <div class="about__photo">
+            <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=900&q=75&auto=format&fit=crop" alt="Médico conversando con una paciente" loading="lazy" width="900" height="600">
+          </div>
+          <ul class="audiences">
+            <li>
+              <strong>Para el paciente</strong>
+              <span>Recibe su tratamiento en un lugar que conoce, cerca de los suyos.</span>
+            </li>
+            <li>
+              <strong>Para la familia</strong>
+              <span>Aprende a cuidar, con educación y acompañamiento del equipo.</span>
+            </li>
+            <li>
+              <strong>Para las aseguradoras</strong>
+              <span>Menos hospitalizaciones y urgencias innecesarias, con costos razonables.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Usuarios -->
+    <section class="section section--tint" id="usuarios" aria-labelledby="usuarios-titulo">
+      <div class="container users">
+        <div class="users__intro">
+          <p class="kicker">Usuarios</p>
+          <h2 class="section__title" id="usuarios-titulo">Asociación de usuarios</h2>
+          <p class="section__lead">Los usuarios de la IPS se agrupan en una asociación que vigila la calidad y la oportunidad del servicio y defiende sus derechos.</p>
+
+          <div class="docs-box">
+            <h3>Documentos de la asociación</h3>
+            <ul class="doc-links doc-links--stack">
+              <li><a href="https://www.saludencasamedicos.com/images/docs/GU-DZ-01_ESTATUTOS_ASOCIACION_DE_USUARIOS.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Estatutos de la asociación (PDF)</a></li>
+              <li><a href="https://www.saludencasamedicos.com/images/docs/GU-DZ-04_POLTICA_PARTICIPACION_SOCIAL_.pdf" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Política de participación social (PDF)</a></li>
+            </ul>
+            <h4>Documentos 2025, por mes</h4>
+            <ul class="months">
+              <li><a href="https://www.saludencasamedicos.com/images/docs/1_ENERO.pdf" target="_blank" rel="noopener">Ene</a></li>
+              <li><a href="https://www.saludencasamedicos.com/images/docs/2_FEBRERO.pdf" target="_blank" rel="noopener">Feb</a></li>
+              <li><a href="https://www.saludencasamedicos.com/images/docs/3_MARZO.pdf" target="_blank" rel="noopener">Mar</a></li>
+              <li><a href="https://www.saludencasamedicos.com/images/docs/4_ABRIL.pdf" target="_blank" rel="noopener">Abr</a></li>
+              <li><a href="https://www.saludencasamedicos.com/images/docs/5_MAYO.pdf" target="_blank" rel="noopener">May</a></li>
+              <li><a href="https://www.saludencasamedicos.com/images/docs/6_JUNIO.pdf" target="_blank" rel="noopener">Jun</a></li>
+              <li><a href="https://www.saludencasamedicos.com/images/docs/7_JULIO.pdf" target="_blank" rel="noopener">Jul</a></li>
+              <li><a href="https://www.saludencasamedicos.com/images/docs/8_AGOSTO.pdf" target="_blank" rel="noopener">Ago</a></li>
+              <li><a href="https://www.saludencasamedicos.com/images/docs/9_SEPTIEMBRE.pdf" target="_blank" rel="noopener">Sep</a></li>
+              <li><a href="https://www.saludencasamedicos.com/images/docs/10_OCTUBRE.pdf" target="_blank" rel="noopener">Oct</a></li>
+              <li><a href="https://www.saludencasamedicos.com/images/docs/11_NOVIEMBRE.pdf" target="_blank" rel="noopener">Nov</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <details class="accordion__item" open>
+            <summary>¿Qué es la asociación de usuarios?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="accordion__body">
+              <p>Es un mecanismo de participación para las personas afiliadas al Sistema General de Seguridad Social en Salud. Los usuarios se agrupan para velar por la calidad del servicio y defender sus derechos ante las IPS y las EPS, sean públicas, mixtas o privadas.</p>
+            </div>
+          </details>
+          <details class="accordion__item">
+            <summary>¿Quién la conforma?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="accordion__body">
+              <p>Un grupo de usuarios que reciben servicios de salud de la IPS, afiliados al régimen contributivo o subsidiado. Vigilan la prestación, la calidad y la oportunidad de los servicios, y el cumplimiento de los deberes de los afiliados según la norma vigente.</p>
+            </div>
+          </details>
+          <details class="accordion__item">
+            <summary>¿Qué funciones tiene?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="accordion__body">
+              <ul class="checks">
+                <li>Asesorar y acompañar a los usuarios en el ejercicio de sus derechos y obligaciones.</li>
+                <li>Atender las quejas de los afiliados sobre deficiencias en el servicio y vigilar que se corrijan.</li>
+                <li>Formular propuestas a la gerencia de la IPS para que lleguen a la junta directiva.</li>
+                <li>Mantener comunicación con las asociaciones de usuarios de otras IPS de la red.</li>
+                <li>Animar a los afiliados a participar en los programas de prevención, promoción y participación social en salud.</li>
+              </ul>
+            </div>
+          </details>
+          <details class="accordion__item">
+            <summary>¿Cómo presento una queja o una solicitud?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="accordion__body">
+              <p>Usa el formulario de <a href="https://form.jotformz.com/82903864542664" target="_blank" rel="noopener">servicio al cliente</a>, escríbenos a <a href="mailto:info@saludencasamedicos.com">info@saludencasamedicos.com</a> o acércate a la sede en el horario de atención.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Corporativo -->
+    <section class="section" id="corporativo" aria-labelledby="corporativo-titulo">
+      <div class="container">
+        <div class="section__head section__head--row">
+          <div>
+            <p class="kicker">Corporativo</p>
+            <h2 class="section__title" id="corporativo-titulo">Documentos para el equipo y para entidades</h2>
+          </div>
+          <p class="section__note">Guías, procedimientos e información institucional de consulta.</p>
+        </div>
+
+        <ul class="doc-grid">
+          <li><a class="doc-card" href="http://saludencasamedicos.co/index.php/guias-de-manejo" target="_blank" rel="noopener"><span>Guías de manejo</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></li>
+          <li><a class="doc-card" href="http://saludencasamedicos.co/index.php/guias-de-practicas-clinicas" target="_blank" rel="noopener"><span>Guías de práctica clínica</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></li>
+          <li><a class="doc-card" href="http://saludencasamedicos.co/index.php/procedimientos" target="_blank" rel="noopener"><span>Procedimientos</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></li>
+          <li><a class="doc-card" href="http://saludencasamedicos.co/index.php/instructivos" target="_blank" rel="noopener"><span>Instructivos</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></li>
+          <li><a class="doc-card" href="http://saludencasamedicos.co/index.php/evaluaciones" target="_blank" rel="noopener"><span>Evaluaciones y talleres</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></li>
+          <li><a class="doc-card" href="https://saludencasamedicos.com/index.php/capacitaciones-scm" target="_blank" rel="noopener"><span>Capacitaciones</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></li>
+          <li><a class="doc-card" href="https://saludencasamedicos.com/index.php/estados-financieros" target="_blank" rel="noopener"><span>Estados financieros</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></li>
+          <li><a class="doc-card" href="https://saludencasamedicos.com/index.php/politica-privacidad/category/10-tratamiento-datos" target="_blank" rel="noopener"><span>Tratamiento de datos personales</span><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section section--tint" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="container contact">
+        <div class="contact__info">
+          <p class="kicker">Contacto</p>
+          <h2 class="section__title" id="contacto-titulo">Solicita un servicio o habla con un asesor</h2>
+          <p class="section__lead">Escríbenos y te respondemos en el horario de atención.</p>
+
+          <ul class="contact-list">
+            <li>
+              <span class="contact-list__icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
+              <div><small>Celular</small><a href="tel:+573159565622">315 956 5622</a></div>
+            </li>
+            <li>
+              <span class="contact-list__icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
+              <div><small>Correo</small><a href="mailto:info@saludencasamedicos.com">info@saludencasamedicos.com</a></div>
+            </li>
+            <li>
+              <span class="contact-list__icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
+              <div><small>Sede</small><span>Calle 10 bis # 67A - 69, Cali, Colombia</span></div>
+            </li>
+            <li>
+              <span class="contact-list__icon"><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg></span>
+              <div><small>Horario</small><span>Lunes a viernes, 8:00 a. m. a 5:00 p. m.<br>Sábados, 8:00 a. m. a 1:00 p. m.</span></div>
+            </li>
+          </ul>
+
+          <div class="map">
+            <iframe title="Mapa de la sede de Salud en Casa Médicos en Cali" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.70078607505!2d-76.55128458573725!3d3.4228702523646746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a41fde675099%3A0x8f61989e65177e44!2sSaludencasamedicos+Sas!5e0!3m2!1ses!2sco!4v1539655933383"></iframe>
+          </div>
+        </div>
+
+        <form class="form" id="form-contacto" novalidate>
+          <h3 class="form__title">Cuéntanos qué necesitas</h3>
+          <p class="form__hint">Los campos con <span aria-hidden="true">*</span><span class="visually-hidden">asterisco</span> son obligatorios.</p>
+
+          <div class="field">
+            <label for="f-nombre">Nombre completo <span aria-hidden="true">*</span></label>
+            <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+            <p class="field__error" id="e-nombre" hidden>Escribe tu nombre.</p>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="f-telefono">Celular <span aria-hidden="true">*</span></label>
+              <input id="f-telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" placeholder="300 000 0000" required>
+              <p class="field__error" id="e-telefono" hidden>Escribe un número de 10 dígitos.</p>
+            </div>
+            <div class="field">
+              <label for="f-quien">¿Para quién es la atención?</label>
+              <select id="f-quien" name="quien">
+                <option>Para mí</option>
+                <option>Para un familiar</option>
+                <option>Soy de una EPS o aseguradora</option>
+                <option>Otro</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f-servicio">Servicio de interés</label>
+            <select id="f-servicio" name="servicio">
+              <option>Necesito orientación</option>
+              <option>Atención domiciliaria</option>
+              <option>Cuidados paliativos</option>
+              <option>Paciente crónico</option>
+              <option>Paciente agudo</option>
+              <option>Clínica de heridas</option>
+              <option>Terapias de rehabilitación</option>
+              <option>Consulta domiciliaria</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="f-mensaje">Cuéntanos el caso <span aria-hidden="true">*</span></label>
+            <textarea id="f-mensaje" name="mensaje" rows="4" placeholder="Diagnóstico, barrio y lo que necesita el paciente" required></textarea>
+            <p class="field__error" id="e-mensaje" hidden>Cuéntanos brevemente qué necesitas.</p>
+          </div>
+
+          <div class="field field--check">
+            <input id="f-datos" name="datos" type="checkbox" required>
+            <label for="f-datos">Autorizo el tratamiento de mis datos según la <a href="https://www.saludencasamedicos.com/images/politica-proteccion-datos-salud-en-casa.pdf" target="_blank" rel="noopener">política de privacidad y uso de datos personales</a>.</label>
+            <p class="field__error" id="e-datos" hidden>Necesitamos tu autorización para contactarte.</p>
+          </div>
+
+          <div class="form__actions">
+            <button class="btn btn--whatsapp btn--lg" type="submit" data-canal="whatsapp">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>Enviar por WhatsApp
+            </button>
+            <button class="btn btn--ghost btn--lg" type="submit" data-canal="correo">
+              <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Enviar por correo
+            </button>
+          </div>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand brand--light" href="#inicio" aria-label="Salud en Casa Médicos, ir al inicio">
+          <svg class="brand__mark" viewBox="0 0 44 44" aria-hidden="true">
+            <rect width="44" height="44" rx="12" fill="#fff"/>
+            <path d="M9.500 21.500 22 11l12.500 10.500" fill="none" stroke="#0f4c81" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13 20v11.500a1.500 1.500 0 0 0 1.500 1.500h15a1.500 1.500 0 0 0 1.500-1.500V20" fill="none" stroke="#0f4c81" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 29.800c-2.900-2.100-4.600-3.800-4.600-5.800a2.500 2.500 0 0 1 4.600-1.400 2.500 2.500 0 0 1 4.600 1.400c0 2-1.700 3.700-4.600 5.800z" fill="#f59a23"/>
+          </svg>
+          <span class="brand__text">
+            <span class="brand__name">Salud en Casa</span>
+            <span class="brand__sub">Médicos S.A.S.</span>
+          </span>
+        </a>
+        <p>Servicios asistenciales domiciliarios en Cali. Fomentamos el autocuidado del paciente y de su familia.</p>
+        <p class="footer__vigilado">Vigilado Supersalud</p>
+      </div>
+
+      <nav aria-label="Servicios">
+        <h2 class="footer__title">Servicios</h2>
+        <ul>
+          <li><a href="#servicios">Atención domiciliaria</a></li>
+          <li><a href="#paliativos">Cuidados paliativos</a></li>
+          <li><a href="#servicios">Paciente crónico</a></li>
+          <li><a href="#servicios">Paciente agudo</a></li>
+          <li><a href="#servicios">Clínica de heridas</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Institucional">
+        <h2 class="footer__title">Institucional</h2>
+        <ul>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#usuarios">Asociación de usuarios</a></li>
+          <li><a href="#corporativo">Corporativo</a></li>
+          <li><a href="#tramites">Trámites en línea</a></li>
+          <li><a href="https://form.jotformz.com/82901159642660" target="_blank" rel="noopener">Trabaja con nosotros</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="footer__title">Contacto</h2>
+        <ul>
+          <li><a href="tel:+573159565622">315 956 5622</a></li>
+          <li><a href="mailto:info@saludencasamedicos.com">info@saludencasamedicos.com</a></li>
+          <li>Calle 10 bis # 67A - 69<br>Cali, Colombia</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© <span id="anio">2026</span> Salud en Casa Médicos S.A.S.</p>
+      <a href="https://www.saludencasamedicos.com/images/politica-proteccion-datos-salud-en-casa.pdf" target="_blank" rel="noopener">Política de privacidad y uso de datos personales</a>
+    </div>
+  </footer>
+
+  <!-- Acciones fijas -->
+  <a class="fab" href="https://wa.me/573159565622?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20atenci%C3%B3n%20m%C3%A9dica%20en%20casa." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+  </a>
+
+  <div class="mobile-bar" role="navigation" aria-label="Acciones rápidas">
+    <a href="tel:+573159565622"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Llamar</a>
+    <a href="https://wa.me/573159565622?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20atenci%C3%B3n%20m%C3%A9dica%20en%20casa." target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a>
+    <a class="mobile-bar__main" href="#contacto">Solicitar</a>
+  </div>
+
+  <script src="assets/script.js" defer></script>
+</body>
+</html>
