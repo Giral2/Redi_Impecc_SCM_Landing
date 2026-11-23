@@ -4,15 +4,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Qué es
 
-Landing page estática en español (es-CO) de Salud en Casa Médicos S.A.S., una IPS de atención médica domiciliaria en Cali. Es un rediseño del sitio Joomla anterior (saludencasamedicos.com). No hay build: son tres archivos que el navegador carga tal cual. `package.json` solo existe para las herramientas de desarrollo (linter y pruebas), nada de eso llega a la página.
+Landing page estática en español (es-CO) de Salud en Casa Médicos S.A.S., una IPS de atención médica domiciliaria en Cali. Es un rediseño del sitio Joomla anterior (saludencasamedicos.com). No hay build: son archivos HTML (`index.html`, `usuarios.html`, `corporativo.html`), un CSS y un JS que el navegador carga tal cual. `package.json` solo existe para las herramientas de desarrollo (linter y pruebas), nada de eso llega a la página.
 
 ## Comandos
 
 ```bash
 node .claude/serve.js        # vista previa en http://localhost:4173 (PORT=xxxx para cambiar el puerto)
 npm ci                       # instala linter y Playwright (una vez)
-npm run check                # sintaxis del JS, archivos enlazados y anclas internas
-npm run lint                 # HTMLHint (index.html) y Stylelint (assets/styles.css)
+npm run check                # sintaxis del JS, archivos enlazados y enlaces internos (también entre páginas)
+npm run lint                 # HTMLHint (todos los *.html) y Stylelint (assets/styles.css)
 npm test                     # pruebas Playwright (arrancan solas el servidor en 4173)
 npx playwright test -g "menú móvil"   # una sola prueba, por nombre
 ```
@@ -23,14 +23,16 @@ El CI (`.github/workflows/ci.yml`, job `build`, exigido por el ruleset de `main`
 
 ## Arquitectura
 
-Todo el contenido está en `index.html` (una sola página con anclas: `#inicio`, `#tramites`, `#servicios`, `#como-funciona`, `#paliativos`, `#nosotros`, `#usuarios`, `#corporativo`, `#contacto`). `assets/styles.css` y `assets/script.js` se enlazan desde ahí.
+La landing está en `index.html`, con anclas: `#inicio`, `#tramites`, `#servicios`, `#como-funciona`, `#paliativos`, `#nosotros`, `#contacto`. "Usuarios" y "Corporativo" viven aparte en `usuarios.html` y `corporativo.html` (cada una con su `<h1>` y un enlace "Volver al inicio"); se llega a ellas desde el menú y el pie. Las tres páginas enlazan `assets/styles.css` y `assets/script.js`.
+
+**Encabezado, pie e iconos están copiados en las tres páginas** (no hay includes ni build). Un cambio en el menú, el pie o el sprite se hace en los tres archivos. En las páginas internas los enlaces a secciones del inicio llevan el prefijo `index.html#...`, y su enlace del menú lleva `is-active` y `aria-current="page"` fijos en el HTML. Una página nueva se crea copiando una de las internas, añadiéndola al menú y al pie de las tres, y sumándola a `PAGINAS` en `tests/sitio.spec.js`.
 
 Acoplamientos que hay que respetar al editar, porque cambiar un lado sin el otro rompe cosas en silencio:
 
 - **Iconos:** son un sprite SVG inline al inicio del `body` (`<symbol id="i-...">`), usado con `<use href="#i-...">`. Un icono nuevo se añade como `<symbol>` allí. El sprite se oculta con tamaño cero; el atributo `hidden` no funciona en `<svg>`.
 - **Pestañas:** `script.js` activa cualquier `[role="tablist"]` y enlaza cada `role="tab"` con su panel por `aria-controls`. Sirve igual para los servicios (vertical, con flechas arriba/abajo) y para misión/visión/calidad. Agregar una pestaña exige tab y panel con ids que coincidan.
 - **Servicio en el formulario:** los enlaces con `data-servicio="X"` preseleccionan en `#f-servicio` la opción cuyo texto sea exactamente `X`. Si se renombra un servicio, hay que cambiarlo en las dos partes.
-- **Menú activo:** `script.js` resalta el enlace de `.nav__link` cuyo `href` apunta a la última sección que pasó por debajo del encabezado. Un enlace nuevo del menú debe apuntar a un `id` de sección existente.
+- **Menú activo:** `script.js` resalta el enlace de `.nav__link` cuyo `href` apunta (`#id`) a la última sección que pasó por debajo del encabezado. Los enlaces a otras páginas no los toca el script. Un enlace nuevo del menú debe apuntar a un `id` de sección existente.
 - **Animación al hacer scroll:** `script.js` pone `data-reveal` por JavaScript a una lista de selectores. El CSS solo oculta esos elementos bajo `.js` y `prefers-reduced-motion: no-preference`. Un bloque nuevo que deba animarse tiene que añadirse a esa lista.
 - **Menú móvil:** el panel se ancla al encabezado (`position: absolute; top: 100%`) con su alto en `--nav-h`, calculado en JS al abrir. No usar `position: fixed` allí: el encabezado tiene `backdrop-filter` y eso hace que `fixed` se mida contra él en lugar de la ventana.
 - **Formulario de contacto:** no tiene backend. Valida en el navegador y abre `wa.me/573159565622` o un `mailto:` con el mensaje armado. El número y el correo son constantes al inicio de `script.js` y también están escritos en `index.html`.

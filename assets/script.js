@@ -76,15 +76,16 @@
 
   /* "Solicitar este servicio" deja el servicio elegido en el formulario */
   const servicio = $('#f-servicio');
-  $$('[data-servicio]').forEach((link) => {
+  if (servicio) $$('[data-servicio]').forEach((link) => {
     link.addEventListener('click', () => {
       const opcion = [...servicio.options].find((o) => o.text === link.dataset.servicio);
       if (opcion) servicio.value = opcion.value;
     });
   });
 
-  /* Enlace activo del menú según la sección visible */
-  const links = $$('.nav__link');
+  /* Enlace activo del menú según la sección visible (solo enlaces a secciones de esta misma página;
+     los de otras páginas llevan su estado fijo en el HTML) */
+  const links = $$('.nav__link[href^="#"]');
   const sections = links.map((l) => $(l.getAttribute('href'))).filter(Boolean);
   const spy = () => {
     const linea = header.offsetHeight + 140;
@@ -129,68 +130,71 @@
     });
   }
 
-  /* Formulario: valida y abre WhatsApp o el correo con el mensaje listo */
-  const form = $('#form-contacto');
-  const status = $('.form__status', form);
-  const reglas = {
-    nombre: (v) => v.trim().length >= 3,
-    telefono: (v) => v.replace(/\D/g, '').length >= 10,
-    mensaje: (v) => v.trim().length >= 10,
-    datos: (_, el) => el.checked,
-  };
+  /* Formulario: valida y abre WhatsApp o el correo con el mensaje listo (solo existe en el inicio) */
+  const iniciarFormulario = (form) => {
+    const status = $('.form__status', form);
+    const reglas = {
+      nombre: (v) => v.trim().length >= 3,
+      telefono: (v) => v.replace(/\D/g, '').length >= 10,
+      mensaje: (v) => v.trim().length >= 10,
+      datos: (_, el) => el.checked,
+    };
 
-  const validar = (campo) => {
-    const ok = reglas[campo.name](campo.value, campo);
-    const error = $(`#e-${campo.name}`);
-    campo.setAttribute('aria-invalid', String(!ok));
-    if (ok) campo.removeAttribute('aria-describedby');
-    else campo.setAttribute('aria-describedby', error.id);
-    error.hidden = ok;
-    return ok;
-  };
+    const validar = (campo) => {
+      const ok = reglas[campo.name](campo.value, campo);
+      const error = $(`#e-${campo.name}`);
+      campo.setAttribute('aria-invalid', String(!ok));
+      if (ok) campo.removeAttribute('aria-describedby');
+      else campo.setAttribute('aria-describedby', error.id);
+      error.hidden = ok;
+      return ok;
+    };
 
-  Object.keys(reglas).forEach((name) => {
-    const campo = form.elements[name];
-    campo.addEventListener('blur', () => {
-      if (campo.value || campo.getAttribute('aria-invalid')) validar(campo);
+    Object.keys(reglas).forEach((name) => {
+      const campo = form.elements[name];
+      campo.addEventListener('blur', () => {
+        if (campo.value || campo.getAttribute('aria-invalid')) validar(campo);
+      });
+      campo.addEventListener('input', () => {
+        if (campo.getAttribute('aria-invalid') === 'true') validar(campo);
+      });
     });
-    campo.addEventListener('input', () => {
-      if (campo.getAttribute('aria-invalid') === 'true') validar(campo);
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      status.textContent = '';
+      const campos = Object.keys(reglas).map((name) => form.elements[name]);
+      const invalidos = campos.filter((c) => !validar(c));
+      if (invalidos.length) {
+        invalidos[0].focus();
+        return;
+      }
+
+      const d = Object.fromEntries(new FormData(form));
+      const texto = [
+        'Hola, quiero solicitar un servicio de Salud en Casa Médicos.',
+        '',
+        `Nombre: ${d.nombre.trim()}`,
+        `Celular: ${d.telefono.trim()}`,
+        `Para quién: ${d.quien}`,
+        `Servicio: ${d.servicio}`,
+        '',
+        d.mensaje.trim(),
+      ].join('\n');
+
+      const canal = e.submitter?.dataset.canal || 'whatsapp';
+      if (canal === 'correo') {
+        const asunto = `Solicitud de servicio: ${d.servicio}`;
+        window.location.href = `mailto:${CORREO}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(texto)}`;
+        status.textContent = 'Abrimos tu aplicación de correo con el mensaje listo. Solo falta enviarlo.';
+      } else {
+        window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`, '_blank', 'noopener');
+        status.textContent = 'Abrimos WhatsApp con el mensaje listo. Solo falta enviarlo.';
+      }
     });
-  });
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    status.textContent = '';
-    const campos = Object.keys(reglas).map((name) => form.elements[name]);
-    const invalidos = campos.filter((c) => !validar(c));
-    if (invalidos.length) {
-      invalidos[0].focus();
-      return;
-    }
-
-    const d = Object.fromEntries(new FormData(form));
-    const texto = [
-      'Hola, quiero solicitar un servicio de Salud en Casa Médicos.',
-      '',
-      `Nombre: ${d.nombre.trim()}`,
-      `Celular: ${d.telefono.trim()}`,
-      `Para quién: ${d.quien}`,
-      `Servicio: ${d.servicio}`,
-      '',
-      d.mensaje.trim(),
-    ].join('\n');
-
-    const canal = e.submitter?.dataset.canal || 'whatsapp';
-    if (canal === 'correo') {
-      const asunto = `Solicitud de servicio: ${d.servicio}`;
-      window.location.href = `mailto:${CORREO}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(texto)}`;
-      status.textContent = 'Abrimos tu aplicación de correo con el mensaje listo. Solo falta enviarlo.';
-    } else {
-      window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(texto)}`, '_blank', 'noopener');
-      status.textContent = 'Abrimos WhatsApp con el mensaje listo. Solo falta enviarlo.';
-    }
-  });
+  };
+  const formulario = $('#form-contacto');
+  if (formulario) iniciarFormulario(formulario);
 
   /* Año del pie */
   $('#anio').textContent = new Date().getFullYear();

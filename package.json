@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node .claude/serve.js",
     "check": "node .github/check-site.mjs",
-    "lint": "htmlhint index.html && stylelint assets/styles.css",
+    "lint": "htmlhint \"*.html\" && stylelint assets/styles.css",
     "test": "playwright test"
   },
   "devDependencies": {

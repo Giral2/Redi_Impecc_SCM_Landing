@@ -698,6 +698,18 @@ a.topbar__item:hover { color: var(--white); text-decoration: underline; }
 .audiences li::before { content: ""; position: absolute; left: 20px; top: 24px; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); }
 .audiences strong { font-family: var(--font-display); color: var(--ink); font-size: 1rem; }
 
+/* Enlace de regreso al inicio (páginas internas: usuarios.html y corporativo.html) */
+.crumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: .9375rem;
+  font-weight: 600;
+  color: var(--blue-700);
+}
+.crumb:hover { text-decoration: underline; }
+
 /* 13. Usuarios */
 .users {
   display: grid;

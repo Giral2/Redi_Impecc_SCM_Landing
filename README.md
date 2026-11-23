@@ -6,7 +6,8 @@ Rediseño de la página de inicio de Salud en Casa Médicos S.A.S., una IPS de a
 
 - Inicio con compromisos de calidad y acceso rápido a los trámites en línea (cotización, historia clínica, teleconsulta, servicio al cliente, incidentes, trabaja con nosotros).
 - Programas de atención: domiciliaria, cuidados paliativos, paciente crónico, paciente agudo y clínica de heridas.
-- Nosotros (misión, visión y política de calidad), asociación de usuarios con sus documentos y sección corporativa.
+- Nosotros (misión, visión y política de calidad).
+- Dos páginas aparte, que se abren desde el menú y el pie: **Usuarios** (`usuarios.html`, asociación de usuarios con sus documentos) y **Corporativo** (`corporativo.html`, guías y documentos institucionales).
 - Formulario de contacto que arma el mensaje y lo abre en WhatsApp o en el correo.
 - Diseño adaptable a móvil, con barra fija de acciones y navegación por teclado.
 
@@ -33,7 +34,9 @@ La primera vez, `npx playwright install chromium` descarga el navegador de prueb
 ## Estructura
 
 ```
-index.html          contenido de la página
+index.html          página de inicio
+usuarios.html       asociación de usuarios
+corporativo.html    documentos corporativos
 assets/styles.css   estilos
 assets/script.js    menú, pestañas, formulario y animaciones
 assets/favicon.svg  icono
