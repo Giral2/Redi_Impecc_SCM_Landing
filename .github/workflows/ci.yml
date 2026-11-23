@@ -15,5 +15,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Revisar el sitio
-        run: node .github/check-site.mjs
+          cache: npm
+      - name: Instalar dependencias
+        run: npm ci
+      - name: Revisar enlaces y sintaxis
+        run: npm run check
+      - name: Linter de HTML y CSS
+        run: npm run lint
+      - name: Instalar navegador de pruebas
+        run: npx playwright install --with-deps chromium
+      - name: Pruebas
+        run: npm test

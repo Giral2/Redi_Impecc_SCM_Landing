@@ -20,6 +20,16 @@ node .claude/serve.js
 
 Luego abre <http://localhost:4173>.
 
+## Calidad: linter y pruebas
+
+```bash
+npm ci          # instala las herramientas (una vez)
+npm run lint    # revisa el HTML y el CSS
+npm test        # pruebas en un navegador real (Playwright)
+```
+
+La primera vez, `npx playwright install chromium` descarga el navegador de pruebas. Todo esto también corre solo en cada Pull Request (CI).
+
 ## Estructura
 
 ```

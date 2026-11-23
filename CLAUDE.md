@@ -4,15 +4,22 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Qué es
 
-Landing page estática en español (es-CO) de Salud en Casa Médicos S.A.S., una IPS de atención médica domiciliaria en Cali. Es un rediseño del sitio Joomla anterior (saludencasamedicos.com). No hay build, ni gestor de paquetes, ni tests, ni linter: son tres archivos que el navegador carga tal cual.
+Landing page estática en español (es-CO) de Salud en Casa Médicos S.A.S., una IPS de atención médica domiciliaria en Cali. Es un rediseño del sitio Joomla anterior (saludencasamedicos.com). No hay build: son tres archivos que el navegador carga tal cual. `package.json` solo existe para las herramientas de desarrollo (linter y pruebas), nada de eso llega a la página.
 
 ## Comandos
 
 ```bash
 node .claude/serve.js        # vista previa en http://localhost:4173 (PORT=xxxx para cambiar el puerto)
+npm ci                       # instala linter y Playwright (una vez)
+npm run check                # sintaxis del JS, archivos enlazados y anclas internas
+npm run lint                 # HTMLHint (index.html) y Stylelint (assets/styles.css)
+npm test                     # pruebas Playwright (arrancan solas el servidor en 4173)
+npx playwright test -g "menú móvil"   # una sola prueba, por nombre
 ```
 
 `.claude/launch.json` define la configuración `sitio` para abrir ese servidor desde el panel del navegador de la app. `serve.js` solo sirve archivos de la raíz del repo, sin caché.
+
+El CI (`.github/workflows/ci.yml`, job `build`, exigido por el ruleset de `main`) corre `check`, `lint` y `test`. Las pruebas viven en `tests/` y cubren formulario, servicio preseleccionado, pestañas con teclado y menú móvil; si cambias esos comportamientos, actualiza la prueba. Stylelint usa `stylelint-config-recommended` con `no-descending-specificity` apagada a propósito (reordenar reglas cambiaría el diseño).
 
 ## Arquitectura
 
